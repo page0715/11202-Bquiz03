@@ -1,44 +1,28 @@
-﻿<?php include_once "./api/db.php";?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0047)? -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php include_once "./include/connect.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>影城</title>
-<link rel="stylesheet" href="css/css.css">
-<script src="js/jquery-1.9.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        footer{
+            position: absolute;
+            bottom: 0px;
+            width: 100vw;
+        }
+    </style>
 </head>
-
 <body>
-<div id="main">
-  <div id="top" class="ct" style=" background:#999 center; background-size:cover; " title="替代文字">
-    <h1>ABC影城</h1>
-  </div>
-  <div id="top2"> 
-    <a href="index.php">首頁</a> 
-    <a href="index.php?do=order">線上訂票</a> 
-    <a href="#">會員系統</a> 
-    <a href="back.php">管理系統</a> 
-  </div>
-  <div id="text"> <span class="ct">最新活動</span>
-    <marquee direction="right">
-    ABC影城票價全面八折優惠1個月
-    </marquee>
-  </div>
-  <div id="mm">
-  <?php
-  
-  $do=$_GET['do']??'main';
-  $file="./front/{$do}.php";
-  if(file_exists($file)){
-    include $file;
-  }else{
-    include "./front/main.php";
-  }
-
-  ?>
-  </div>
-  <div id="bo"> ©Copyright 2010~2014 ABC影城 版權所有 </div>
+<div class=" min-vh-100 w-100 ">
+<?php include "./include/header.php";?>
+1
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+2
+<?php include "./include/footer.php";?>
 </div>
 </body>
 </html>
