@@ -1,6 +1,5 @@
 <?php include_once "db.php";
 
-
 sort($_POST['seats']);
 $_POST['seats']=serialize($_POST['seats']);
 $id=$Order->max('id')+1;
